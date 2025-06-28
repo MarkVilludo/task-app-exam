@@ -12,10 +12,12 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::middleware(['web', 'auth'])->group(function () {
-    Route::get('/tasks', [ListTasksAction::class, 'asController']);
-    Route::post('/tasks', [CreateTaskAction::class, 'asController']);
-    Route::put('/tasks/{task}', [UpdateTaskAction::class, 'asController']);
-    Route::patch('/tasks/{task}', [UpdateTaskAction::class, 'asController']);
-    Route::delete('/tasks/{task}', [DeleteTaskAction::class, 'asController']);
+//for now we are using web middleware to avoid cors issues for the api routes
+//also were using session 
+Route::prefix('tasks')->middleware('web', 'auth')->group(function () {
+    Route::get('/', [ListTasksAction::class, 'asController']);
+    Route::post('/', [CreateTaskAction::class, 'asController']);
+    Route::put('/{task}', [UpdateTaskAction::class, 'asController']);
+    Route::patch('/{task}', [UpdateTaskAction::class, 'asController']);
+    Route::delete('/{task}', [DeleteTaskAction::class, 'asController']);
 });

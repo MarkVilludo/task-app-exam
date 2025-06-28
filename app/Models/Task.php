@@ -15,7 +15,7 @@ class Task extends Model
         'content',
         'status',
         'image_path',
-        'is_draft',
+        'is_draft', //this is used to indicate if the task is a draft or (published if false)
     ];
 
     protected $casts = [

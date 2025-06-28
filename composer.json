@@ -11,6 +11,7 @@
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
+        "lorisleiva/laravel-actions": "^2.9",
         "mark-villudo/laravel-admin-panel-inertia-vue": "@dev",
         "tightenco/ziggy": "^2.0"
     },
@@ -21,6 +22,7 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
+        "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^11.5.3"
     },
     "autoload": {

@@ -17,4 +17,3 @@ Route::middleware([
         return Inertia::render('Tasks');
     })->name('tasks');
 });
-

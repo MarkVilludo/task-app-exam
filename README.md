@@ -1,3 +1,22 @@
+## Pre-Requisites
+
+This project is built on top of a modern Laravel boilerplate, leveraging Jetstream, Inertia.js, and other community packages for rapid development and best practices.
+
+**Key Boilerplate Packages Used:**
+- [Laravel 12](https://laravel.com/) (PHP framework)
+- [mark-villudo/laravel-admin-panel-inertia-vue](https://packagist.org/packages/mark-villudo/laravel-admin-panel-inertia-vue) (custom admin panel boilerplate)
+- [lorisleiva/laravel-actions](https://github.com/lorisleiva/laravel-actions) (action classes)
+- [laravel/sanctum](https://laravel.com/docs/10.x/sanctum) (API authentication)
+
+**System Requirements:**
+```sh
+php 8.2.28
+nvm v20
+npm 11.4.2
+node v20.19.3
+laravel 12
+```
+
 ## Installation & Setup
 
 1. **Clone the repository**
@@ -19,7 +38,7 @@
 4. **Copy and configure your environment file**
    ```sh
    cp .env.example .env
-   # Edit .env and set your database and app settings
+   # Edit .env and set your database and app settings (DB_DATABASE, DB_USERNAME, DB_PASSWORD, etc.)
    ```
 
 5. **Generate application key**
@@ -67,3 +86,13 @@
 - [vite](https://vitejs.dev/)
 
 ---
+
+## Code Quality: Static Analysis with PHPStan
+
+This project uses [PHPStan](https://phpstan.org/) for static analysis and code quality checks.
+
+To run PHPStan:
+```sh
+vendor/bin/phpstan analyse app database routes --memory-limit=512M
+```
+A successful run will show: `[OK] No Errors`

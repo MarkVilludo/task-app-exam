@@ -88,7 +88,7 @@
               <div class="mb-2">
                 <label><input type="checkbox" v-model="form.is_draft" /> Save as draft</label>
               </div>
-              <div class="mb-2">
+              <div class="mb-2" v-if="allTasks.length > 0">
                 <label class="block">Select Subtasks</label>
                 <select v-model="form.subtasks" multiple class="border rounded px-2 py-1 w-full">
                   <option v-for="task in allTasks" :key="task.id" :value="task.id" v-if="!form.id || task.id !== form.id">

@@ -28,7 +28,7 @@ class DeleteOldTrashedTasks extends Command
     public function handle()
     {
         $count = Task::onlyTrashed()
-            ->where('deleted_at', '<', now()->subDays(30))
+            ->where('deleted_at', '<', now()->subDays(config('tasks.schedule_cleanup')))
             ->forceDelete();
         $this->info("Deleted $count old trashed tasks.");
     }
