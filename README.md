@@ -2,8 +2,8 @@
 
 1. **Clone the repository**
    ```sh
-   git clone <your-repo-url>
-   cd <your-repo-directory>
+   git clone https://github.com/MarkVilludo/task-app-exam
+   cd task-app-exam
    ```
 
 2. **Install PHP dependencies**
