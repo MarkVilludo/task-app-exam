@@ -1,6 +1,6 @@
 ## Pre-Requisites
 
-This project is built on top of a modern Laravel boilerplate, leveraging Jetstream, Inertia.js, and other community packages for rapid development and best practices.
+This project is built on top of a modern Laravel boilerplate, leveraging Jetstream, Inertia.js, and my package for admin panel for rapid development and best practices.
 
 **Key Boilerplate Packages Used:**
 - [Laravel 12](https://laravel.com/) (PHP framework)
