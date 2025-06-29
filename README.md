@@ -96,3 +96,12 @@ To run PHPStan:
 vendor/bin/phpstan analyse app database routes --memory-limit=512M
 ```
 A successful run will show: `[OK] No Errors`
+
+
+## Auto Remove trash
+
+The number of days is configurable in `config/task.php`
+
+```sh
+php artisan app:delete-old-trashed-tasks
+```
