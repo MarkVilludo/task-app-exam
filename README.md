@@ -102,6 +102,7 @@ A successful run will show: `[OK] No Errors`
 
 The number of days is configurable in `config/task.php`
 
+To run cleanup trash:
 ```sh
 php artisan app:delete-old-trashed-tasks
 ```
